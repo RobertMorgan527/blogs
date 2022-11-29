@@ -1,0 +1,41 @@
+.deleteButton{
+    display: flex;
+    width: 5vw;
+    align-self: flex-end;
+
+    background-color: #ffb0b0;
+    border-radius: 3px;
+    border: 1px solid #000000;
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+.deleteButton:hover,
+.deleteButton:focus {
+  background-color: #f05151;
+  color: #000000;
+}
+
+.deleteButton:focus {
+  box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.15);
+}
+
+.deleteButton:active {
+  background-color: #ff0000;
+  box-shadow: none;
+  color: #000000;
+}
