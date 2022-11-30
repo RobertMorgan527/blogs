@@ -7,6 +7,8 @@ import QAPics from './QAPics';
 import NotFound from './NotFound';
 import { AnimatePresence } from 'framer-motion';
 
+const path = process.env.REACT_APP_PATH;
+
 function App() {
   const location = useLocation();
   return (
@@ -14,10 +16,10 @@ function App() {
         <MainNavigation />
         <AnimatePresence mode="wait">
           <Routes key={location.pathname} location={location}>
-            <Route path='/' element={<Blogs />} />
-            <Route path="/new-blog" element={<NewBlog />} />
-            <Route path="/qa/pics/:id" element={<QAPics />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path={path+'/'} element={<Blogs />} />
+            <Route path={path+"/new-blog"} element={<NewBlog />} />
+            <Route path={path+"/qa/pics/:id"} element={<QAPics />} />
+            <Route path={path+"/*"} element={<NotFound />} />
           </Routes>
         </AnimatePresence>
       </div>
