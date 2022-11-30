@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8ee1393a-b2dd-467d-a8b6-5e901aad0fb9/AppServices/subscriptions/8ee1393a-b2dd-467d-a8b6-5e901aad0fb9/resourceGroups/RobertQABlogs/providers/Microsoft.Web/sites/RobertQABlogs",
+    "appService.deploySubpath": "."
+}

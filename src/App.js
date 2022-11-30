@@ -10,12 +10,11 @@ import { AnimatePresence } from 'framer-motion';
 const path = process.env.REACT_APP_PATH;
 
 function App() {
-  const location = useLocation();
   return (
       <div>
         <MainNavigation />
         <AnimatePresence mode="wait">
-          <Routes key={location.pathname} location={location}>
+          <Routes key={useLocation().pathname} location={useLocation()}>
             <Route path={path+'/'} element={<Blogs />} />
             <Route path={path+"/new-blog"} element={<NewBlog />} />
             <Route path={path+"/qa/pics/:id"} element={<QAPics />} />
