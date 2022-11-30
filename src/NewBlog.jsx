@@ -1,4 +1,5 @@
 import { useState, useRef} from 'react';
+import AnimatedPage from './AnimatedPage';
 import Card from "./Card"
 import "./newButton.css"
 
@@ -27,14 +28,16 @@ function NewBlog(props) {
         window.location.replace("/")
         }
     return (
-        <Card>
-            <form onSubmit={submitHandler}>
-                <label class="inputLabel">Title:</label> <input class="newBlogInput" type="text" value={title} ref={titleRef} />
-                <label class="inputLabel">Author:</label> <input class="newBlogInput" type="text" value={author} ref={authorRef} />
-                <label class="inputLabel">Body:</label> <textarea class="newBlogInput" name="Text1" cols="129" rows="5" value={body} ref={bodyRef} />
-                <button class="newButton">Add blog</button>
-            </form>
-        </Card>
+        <AnimatedPage>
+            <Card>
+                <form onSubmit={submitHandler}>
+                    <label className="inputLabel">Title:</label> <input className="newBlogInput" type="text" value={title} ref={titleRef} />
+                    <label className="inputLabel">Author:</label> <input className="newBlogInput" type="text" value={author} ref={authorRef} />
+                    <label className="inputLabel">Body:</label> <textarea className="newBlogInput" name="Text1" cols="129" rows="5" value={body} ref={bodyRef} />
+                    <button className="newButton">Add blog</button>
+                </form>
+            </Card>
+        </AnimatedPage>
     );
 }
 export default NewBlog;

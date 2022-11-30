@@ -50,3 +50,9 @@
     font-size: large;
     font-weight: 700;
 }
+
+#fade-out-card{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 200ms, opacity 200ms linear;
+}

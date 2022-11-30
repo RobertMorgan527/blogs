@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import AnimatedPage from './AnimatedPage';
 import BlogList from './BlogList';
 function Blogs() {
     const [blogs, setBlogs] = useState(null);
@@ -21,25 +22,29 @@ function Blogs() {
         });
     }, []); 
 
-    function deleteBlog(id) {
+    async function deleteBlog(id) {
         fetch('http://localhost:4000/blogs/'+id, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' }
         });
+        await new Promise(resolve => setTimeout(resolve, 300));
         const newBlogs = blogs.filter(item => item.id !== id);
         setBlogs(newBlogs);
     }
 
     return ( 
-    <div> {error && 
-        <div>{error}</div>}
-        {isLoading && 
-        <div>
-            Wait...
-        </div>}
-        {blogs && 
-        <BlogList blogs={blogs} deleteBlog={deleteBlog} />} 
-    </div>
+        
+            <div> {error && 
+                <div>{error}</div>}
+                {isLoading && 
+                <div>
+                    Wait...
+                </div>}
+                {blogs && 
+                <AnimatedPage>
+                    <BlogList blogs={blogs} deleteBlog={deleteBlog} />
+                </AnimatedPage>} 
+            </div>
     );
 }
 export default Blogs;
