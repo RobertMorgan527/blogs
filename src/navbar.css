@@ -23,9 +23,14 @@
     box-shadow: 0 3px 9px black;
     margin:1vw;
     padding: 1vw;
-    width:5vw;
+    width:20vw;
     font-size: 2vh;
     font-weight: 700;
+}
+@media only screen and (min-width: 1024px) {
+    .nav-link{
+        width:10vw;
+    }
 }
 
 .nav-link:hover,

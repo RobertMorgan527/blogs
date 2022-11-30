@@ -41,6 +41,12 @@
       "author": "Robert",
       "body": "test test test",
       "id": 11
+    },
+    {
+      "title": "New Blog",
+      "author": "Robert",
+      "body": "Checking everything works",
+      "id": 12
     }
   ]
 }

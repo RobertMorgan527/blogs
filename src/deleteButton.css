@@ -1,6 +1,6 @@
 .deleteButton{
     display: flex;
-    width: 5vw;
+    width: 20vw;
     align-self: flex-end;
 
     background-color: #ffb0b0;
@@ -23,6 +23,13 @@
     vertical-align: baseline;
     white-space: nowrap;
 }
+
+@media only screen and (min-width: 1024px) {
+    .deleteButton{
+        width: 100px;
+    }
+}
+
 
 .deleteButton:hover,
 .deleteButton:focus {
