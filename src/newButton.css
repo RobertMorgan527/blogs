@@ -1,0 +1,49 @@
+.newButton{
+    display: flex;
+    width: 20vw;
+    align-self: flex-end;
+    align-items: right;
+
+    background-color: #ddffb0;
+    border-radius: 3px;
+    border: 1px solid #000000;
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.15385;
+    margin-top: 1vh;
+    margin-left: auto;
+    outline: none;
+    padding: 8px .8em;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+@media only screen and (min-width: 1024px) {
+  .newButton{
+      width: 100px;
+  }
+}
+
+.newButton:hover,
+.newButton:focus {
+  background-color: #76e013;
+  color: #000000;
+}
+
+.newButton:focus {
+  box-shadow: 0 0 0 4px rgba(115, 255, 0, 0.15);
+}
+
+.newButton:active {
+  background-color: #48ff00;
+  box-shadow: none;
+  color: #000000;
+}
