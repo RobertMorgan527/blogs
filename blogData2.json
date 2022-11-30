@@ -1,18 +1,6 @@
 {
   "blogs": [
     {
-      "title": "New Blog 4",
-      "author": "Robert",
-      "body": "Blog Blog Blog Blog Blog",
-      "id": 4
-    },
-    {
-      "title": "New Blog 5",
-      "author": "Robert",
-      "body": "Blog Blog Blog Blog Blog",
-      "id": 5
-    },
-    {
       "title": "New Blog",
       "author": "Robert",
       "body": "Testing using text area",
@@ -47,6 +35,12 @@
       "author": "Robert",
       "body": "Checking everything works",
       "id": 12
+    },
+    {
+      "title": "New blog",
+      "author": "Robert",
+      "body": "Blog asdasdasdadagasga",
+      "id": 13
     }
   ]
 }
