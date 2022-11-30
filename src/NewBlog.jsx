@@ -1,9 +1,11 @@
 import { useState, useRef} from 'react';
+import { useNavigate } from 'react-router-dom';
 import AnimatedPage from './AnimatedPage';
 import Card from "./Card"
 import "./newButton.css"
 
 function NewBlog(props) {
+    const navigate = useNavigate();
     const { title } = useState('');
     const { body } = useState('');
     const { author } = useState('');
@@ -18,6 +20,7 @@ function NewBlog(props) {
             body: bodyRef.current.value
         };
         addBlog(data);
+        navigate("/")
     }
     function addBlog(data) {
         fetch('http://localhost:4000/blogs', {
@@ -25,8 +28,7 @@ function NewBlog(props) {
             body: JSON.stringify(data),
             headers: { 'Content-Type': 'application/json' }
         });
-        window.location.replace("/")
-        }
+     }
     return (
         <AnimatedPage>
             <Card>
