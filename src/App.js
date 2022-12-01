@@ -14,14 +14,12 @@ function App() {
       <div>
           <MainNavigation />
           <AnimatePresence mode="wait">
-            <Router key={useLocation().pathname} location={useLocation()}>
-              <Routes>
-                <Route path={path+'/'} element={<Blogs />} />
-                <Route path={path+"/new-blog"} element={<NewBlog />} />
-                <Route path={path+"/qa/pics/:id"} element={<QAPics />} />
-                <Route path={path+"/*"} element={<NotFound />} />
-              </Routes>
-            </Router>
+            <Routes key={useLocation().pathname} location={useLocation()}>
+              <Route path={path+'/'} element={<Blogs />} />
+              <Route path={path+"/new-blog"} element={<NewBlog />} />
+              <Route path={path+"/qa/pics/:id"} element={<QAPics />} />
+              <Route path={path+"/*"} element={<NotFound />} />
+            </Routes>
           </AnimatePresence>
         
       </div>
