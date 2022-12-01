@@ -12,17 +12,18 @@ const path = process.env.REACT_APP_PATH;
 function App() {
   return (
       <div>
-        <Router>
           <MainNavigation />
           <AnimatePresence mode="wait">
-            <Routes key={useLocation().pathname} location={useLocation()}>
-              <Route path={path+'/'} element={<Blogs />} />
-              <Route path={path+"/new-blog"} element={<NewBlog />} />
-              <Route path={path+"/qa/pics/:id"} element={<QAPics />} />
-              <Route path={path+"/*"} element={<NotFound />} />
-            </Routes>
+            <Router>
+              <Routes key={useLocation().pathname} location={useLocation()}>
+                <Route path={path+'/'} element={<Blogs />} />
+                <Route path={path+"/new-blog"} element={<NewBlog />} />
+                <Route path={path+"/qa/pics/:id"} element={<QAPics />} />
+                <Route path={path+"/*"} element={<NotFound />} />
+              </Routes>
+            </Router>
           </AnimatePresence>
-        </Router>
+        
       </div>
 
   )
