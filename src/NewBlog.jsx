@@ -23,7 +23,7 @@ function NewBlog(props) {
         navigate("/")
     }
     function addBlog(data) {
-        fetch('http://localhost:4000/blogs', {
+        fetch('http://robertqablogs.azurewebsites.net:443/blogs', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: { 'Content-Type': 'application/json' }

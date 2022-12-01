@@ -7,7 +7,7 @@ function Blogs() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:4000/blogs')
+        fetch('robertqablogs.azurewebsites.net:443/blogs')
         .then(res => {
             if(!res.ok){
                 throw Error('Could not get data for that resource.');
@@ -23,7 +23,7 @@ function Blogs() {
     }, []); 
 
     async function deleteBlog(id) {
-        fetch('http://localhost:4000/blogs/'+id, {
+        fetch('http://robertqablogs.azurewebsites.net:443/blogs/'+id, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' }
         });
