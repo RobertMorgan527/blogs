@@ -14,8 +14,8 @@ function App() {
       <div>
           <MainNavigation />
           <AnimatePresence mode="wait">
-            <Router>
-              <Routes key={useLocation().pathname} location={useLocation()}>
+            <Router key={useLocation().pathname} location={useLocation()}>
+              <Routes>
                 <Route path={path+'/'} element={<Blogs />} />
                 <Route path={path+"/new-blog"} element={<NewBlog />} />
                 <Route path={path+"/qa/pics/:id"} element={<QAPics />} />
